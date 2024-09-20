@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Review</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body style="background-color: rgb(139, 220, 247);">
+    <a href="MasterChef.html" style="float: inline-start;"><img src="http://127.0.0.1:5500/chef.png" alt="nothin" width="100px"></a>
+    <div class="container">
+        <h1>Write a Review</h1>
+        <form id="reviewForm">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="recipe">Recipe Name:</label>
+                <input type="text" id="recipe" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="review">Your Review:</label>
+                <textarea id="review" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <h2>Reviews</h2>
+        <div id="reviewsContainer">
+            <!-- Reviews will be injected here -->
+        </div>
+    </div>
+    <script src="review.js"></script>
+</body>
+</html>
