@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Sign In Page</title>
 </head>
 <style>
-form{
-    border-style: dotted;
-    border-radius: 20px;
-    margin-left: 600px;
-    margin-right: 600px;
-    padding: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-}
-h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 300px;
-}
+	h1{
+		font-size: 40px;
+	}
+	div{
+		color: white;
+		text-align: center;
+		border: 2px solid white;
+		margin-left: 200px;
+		margin-right: 200px;
+		padding: 20px;
+		font-size: 30px;
+	}
 
-body{
-    /* margin-top: 150px; */
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/014/533/873/small_2x/food-background-food-menu-backround-photo.jpg);
-    background-size: cover;
-}
-footer{
-	margin-top: 300px;
-}
+	h1 {
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-weight: 300px;
+	}
 
-
+	body {
+		background-image: url(https://cdn.wallpapersafari.com/50/72/I3Xxty.jpg);
+		background-size: cover;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	}
 </style>
-<body> 
-	<center>
-		<h1 style="color: white;">Sign In Page</h1>
-	<form id="signin-form">
-		<label for="username">Username:</label>
-		<input type="text" id="username" name="username"><br><br>
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password"><br><br>
-		<label for="confirm-password">Confirm Password:</label>
-		<input type="password" id="confirm-password" name="confirm-password"><br><br>
-		<input type="submit" value="Sign In">
-	</form>
+
+<body>
+	<center><h1 style="color: rgb(114, 171, 255);">Sign In Page</h1></center>
+	<hr><br><br><br><br><br><br>
+	<div>
+		<form id="signin-form">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username"><br><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"><br><br>
+			<label for="confirm-password">Confirm Password:</label>
+			<input type="password" id="confirm-password" name="confirm-password"><br><br>
+			<input type="submit" value="Sign In">
+		</form>
+	</div>
+	<br><br>
 	<div id="signin-status"></div>
-</center>
-<footer>
-	<a href="MasterChef.html" style="float: inline-start;"><figure><img src="http://127.0.0.1:5500/chef.png" alt="nothin" width="100px"></figure><figcaption style="color: white; text-decoration: none; font-size: large; font-weight: 300; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: rgb(255, 13, 0); padding: 3px; border-radius: 10px;">Navigate to MasterChef</figcaption></a>
-</footer>
+	<br>
+
 	<script src="script.js"></script>
 </body>
+
 </html>
