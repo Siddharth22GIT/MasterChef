@@ -1,347 +1,124 @@
 header {
-    padding-top: 20px;
     color: white;
-    /* background-color: rgb(0, 0, 0); */
+    padding: 20px;
+    background-color: rgb(55, 0, 255);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: sticky;
+    top: 0px;
 
     a {
+        border-radius: 10px;
         color: rgb(255, 255, 255);
         text-decoration: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 30px;
-        border-radius: 10px;
-        border-style: initial;
-        /* background-color: rgb(0, 0, 0); */
-        padding: 10px;
-
-
     }
 
-    img {
-        width: 120px;
-        border-radius: 100px;
-        margin-left: 30px;
-        margin-bottom: 30px;
-    }
-
-    a5 {
-        float: right;
-        text-decoration: none;
-        margin-top: 30px;
-    }
-
-    a4 {
-        float: right;
-        text-decoration: none;
-        margin-top: 30px;
-    }
-
-    a3 {
-        float: right;
-        text-decoration: none;
-        margin-top: 30px;
-    }
-
-    a2 {
-        float: right;
-        text-decoration: none;
-        margin-top: 30px;
-    }
-
-    a1 {
-        float: right;
-        text-decoration: none;
-        margin-top: 30px;
+    a:hover {
+        color: rgb(13, 255, 0);
     }
 }
 
 body {
-    background-color: black;
     background-image: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-56228.jpg?size=626&ext=jpg);
     background-size: cover;
-
-
-    color: rgb(255, 255, 255);
-
-    div {
-        text-align: center;
-        align-items: center;
-        align-self: center;
-        align-content: center;
-        /* border-style: ridge */
-    }
-}
-
-div1 {
-    text-align: center;
-    padding: 50px;
-    border-radius: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    
-
-    h1 {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 90px;
-        border-style: dotted;
-        border-radius: 10px;
-        color: rgb(153, 228, 247);
-    }
-
-    h3 {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 40px;
-        color: rgb(103, 255, 38);
-    }
-
-    p {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    input {
-        size: 100px;
-        border-radius: 10px;
-        background-color: rgb(255, 255, 255);
-        color: rgb(51, 0, 255);
-        position: relative;
-        display: block;
-        text-align: center;
-        margin: auto;
-        width: 60%;
-        padding: 12px;
-
-    }
-}
-
-div2 {
-    font-size: 70px;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-    p {
-        /* border-style: ridge; */
-        border-radius: 20px;
-        background-color: rgb(68, 167, 195);
-        padding: 20px;
-        margin-left: 300px;
-        margin-right: 300px;
+.div1 {
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+
+    h1 {
+        border-style: ridge;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+    }
+
+    .simply {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 40px;
+        padding: 10px;
+        color: rgb(0, 255, 234);
     }
 }
 
-div3 {
-    margin-bottom: 300px;
+.div3 {
+    margin-top: 100px;
 
     a {
         img {
             border-radius: 2000px;
-            width: 350px;
+            width: 210px;
         }
     }
 
-    h1 {
+    .feat {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
-        font-size: 70px;
+        font-size: 50px;
         color: rgb(255, 255, 255);
         border-color: white;
-        /* background-color: rgb(247, 137, 104); */
         border-radius: 10px;
         margin-left: 100px;
         margin-right: 100px;
-
     }
-
 }
 
-div4 {
+.div4 {
     margin-top: 100px;
 
     h1 {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 70px;
     }
-
-    first {
-        text-align: center;
-
-        img {
-            float: right;
-            border-radius: 2000px;
-            width: 100px;
-        }
-
-        h1 {
-            font-size: 70px;
-            border-radius: 10px;
-            /* background-color: rgb(249, 133, 101); */
-            /* margin-left: 100px;
-            margin-right: 100px; */
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        h2 {
-            font-size: 40px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            /* background-color: blueviolet; */
-            border-radius: 20px;
-            margin-left: 770px;
-            display: inline;
-            padding: 10px;
-        }
-
-        p {
-            font-size: 40px;
-            border-radius: 20px;
-            /* margin-right: 800px; */
-            margin-left: 200px;
-            margin-right: 200px;
-            background-color: rgb(53, 196, 222);
-            padding: 10px;
-            margin-top: 2px;
-
-        }
-    }
-
-    img {
-        border-radius: 20000px;
-        margin-left: 10px;
-    }
-
-    second {
-
-        /* margin: 300px; */
-        img {
-            margin-left: 400px;
-        }
-
-        alpha {
-            float: right;
-            margin-right: 100px;
-            border-radius: 20px;
-            /* border-style: ridge; */
-            /* background-color: plum; */
-            padding: 10px;
-
-            p {
-                font-size: 20px;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
-        }
-    }
-
-    third {
-
-        /* margin: 300px; */
-        img {
-            margin-left: 400px;
-        }
-
-        beta {
-            float: right;
-            margin-right: 215px;
-            border-radius: 20px;
-            /* border-style: ridge; */
-            /* background-color: plum; */
-            padding: 10px;
-
-            p {
-                font-size: 20px;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
-        }
-    }
-
-    fourth {
-
-        /* margin: 300px; */
-        img {
-            margin-left: 400px;
-        }
-
-        gamma {
-            float: right;
-            margin-right: 100px;
-            border-radius: 20px;
-            /* border-style: ridge; */
-            /* background-color: rgb(236, 153, 236); */
-            padding: 10px;
-
-            p {
-                font-size: 20px;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
-        }
-    }
-
 }
 
-div {
-    /* margin-left: 200px;
-    margin-right: 200px; */
-    border-radius: 20px;
-    text-align: center;
+.p1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 150px;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(189, 2, 2);
+    background-color: rgb(255, 200, 200);
+    border-radius: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 30px;
+}
 
-    h3 {
-        text-align: center;
+.div5 {
+    img {
+        border-radius: 900px;
+    }
+
+    h1 {
+        color: rgb(255, 0, 0);
+        font-size: 30px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 40px;
-        /* border-style: ridge; */
-        border-radius: 20px;
-        color: white;
-        background-color: rgb(20, 159, 177);
-        margin-left: 400px;
-        margin-right: 400px;
-
+        background-color: beige;
+        border-radius: 30px;
+        margin-left: 200px;
+        margin-right: 200px;
+        padding: 10px;
     }
 
-    p1 {
-        float: right;
-        font-size: 30px;
-        /* border-style: ridge; */
-        border-radius: 20px;
-        /* background-color: rgb(0, 0, 0); */
+    p {
+        margin-left: 70px;
+        margin-right: 70px;
         color: white;
-        margin-left: 300px;
-        margin-right: 300px;
+        font-size: 30px
     }
-
-    p2 {
-        float: right;
-        font-size: 30px;
-        /* border-style: ridge; */
-        border-radius: 20px;
-        /* background-color: rgb(0, 0, 0); */
-        color: white;
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-
-    p3 {
-        float: right;
-        font-size: 30px;
-        /* border-style: ridge; */
-        border-radius: 20px;
-        /* background-color: rgb(0, 0, 0); */
-        color: white;
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-
-    p4 {
-        float: right;
-        font-size: 30px;
-        /* border-style: ridge; */
-        border-radius: 20px;
-        /* background-color: rgb(0, 0, 0); */
-        color: white;
-        margin-bottom: 20px;
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-
 }
 
 footer {
-    background-color: black;
     margin-bottom: 300px;
 
     img {
@@ -352,6 +129,7 @@ footer {
     }
 
     p {
+        color: white;
         float: left;
         margin-top: 80px;
         margin-left: 30px;
