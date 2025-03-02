@@ -1,7 +1,7 @@
 header {
     color: white;
     padding: 20px;
-    background-color: blue;
+    background-color: black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -23,7 +23,7 @@ header {
 }
 
 body {
-    background-color:rgb(35, 90, 255);
+    background-color: black;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
