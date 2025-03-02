@@ -1,54 +1,345 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Sign In Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #3498db, #8e44ad);
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 1rem 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .tab.active {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .form-content {
+            display: none;
+        }
+
+        .form-content.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .success-message {
+            color: #27ae60;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+            text-align: center;
+            padding: 0.5rem;
+            background: #e8f8f5;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-<style>
-	h1{
-		font-size: 40px;
-	}
-	div{
-		color: white;
-		text-align: center;
-		border: 2px solid white;
-		margin-left: 200px;
-		margin-right: 200px;
-		padding: 20px;
-		font-size: 30px;
-	}
-
-	h1 {
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-		font-weight: 300px;
-	}
-
-	body {
-		background-image: url(https://cdn.wallpapersafari.com/50/72/I3Xxty.jpg);
-		background-size: cover;
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	}
-</style>
 
 <body>
-	<center><h1 style="color: rgb(114, 171, 255);">Sign In Page</h1></center>
-	<hr><br><br><br><br><br><br>
-	<div>
-		<form id="signin-form">
-			<label for="username">Username:</label>
-			<input type="text" id="username" name="username"><br><br>
-			<label for="password">Password:</label>
-			<input type="password" id="password" name="password"><br><br>
-			<label for="confirm-password">Confirm Password:</label>
-			<input type="password" id="confirm-password" name="confirm-password"><br><br>
-			<input type="submit" value="Sign In">
-		</form>
-	</div>
-	<br><br>
-	<div id="signin-status"></div>
-	<br>
+    <div class="container">
+        <h1>Welcome</h1>
+        
+        <div class="tabs">
+            <div class="tab active" id="loginTab">Log In</div>
+            <div class="tab" id="signupTab">Sign Up</div>
+        </div>
 
-	<script src="script.js"></script>
+        <div class="form-content active" id="loginForm">
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                    <div class="error-message" id="loginEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                    <div class="error-message" id="loginPasswordError"></div>
+                </div>
+
+                <button type="submit" class="btn">Log In</button>
+                <div class="success-message" id="loginSuccess">Login successful!</div>
+            </form>
+        </div>
+
+        <div class="form-content" id="signupForm">
+            <form onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                    <div class="error-message" id="signupEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                    <div class="error-message" id="signupPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="success-message" id="signupSuccess">Account created successfully!</div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        const loginTab = document.getElementById('loginTab');
+        const signupTab = document.getElementById('signupTab');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('active');
+            signupTab.classList.remove('active');
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+            resetMessages();
+        });
+
+        signupTab.addEventListener('click', () => {
+            signupTab.classList.add('active');
+            loginTab.classList.remove('active');
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+            resetMessages();
+        });
+
+        // User data storage (in real app, this would be a database)
+        let users = [];
+
+        // Handle Login
+        function handleLogin(event) {
+            event.preventDefault();
+            resetMessages();
+
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Validation
+            let hasError = false;
+
+            if (!isValidEmail(email)) {
+                showError('loginEmailError', 'Please enter a valid email address');
+                hasError = true;
+            }
+
+            if (password.length < 6) {
+                showError('loginPasswordError', 'Password must be at least 6 characters');
+                hasError = true;
+            }
+
+            if (!hasError) {
+                // Check if user exists (in real app, this would be a server request)
+                const user = users.find(u => u.email === email && u.password === password);
+                
+                if (user) {
+                    // Login successful
+                    document.getElementById('loginSuccess').style.display = 'block';
+                    console.log('User logged in:', user);
+                    
+                    // In a real app, you would redirect the user or update UI here
+                    setTimeout(() => {
+                        alert(`Welcome back, ${user.name}!`);
+                    }, 1000);
+                } else {
+                    showError('loginPasswordError', 'Invalid email or password');
+                }
+            }
+        }
+
+        // Handle Signup
+        function handleSignup(event) {
+            event.preventDefault();
+            resetMessages();
+
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validation
+            let hasError = false;
+
+            if (name.length < 2) {
+                showError('nameError', 'Name must be at least 2 characters');
+                hasError = true;
+            }
+
+            if (!isValidEmail(email)) {
+                showError('signupEmailError', 'Please enter a valid email address');
+                hasError = true;
+            }
+
+            if (password.length < 6) {
+                showError('signupPasswordError', 'Password must be at least 6 characters');
+                hasError = true;
+            }
+
+            if (password !== confirmPassword) {
+                showError('confirmPasswordError', 'Passwords do not match');
+                hasError = true;
+            }
+
+            // Check if email already exists
+            if (users.some(user => user.email === email)) {
+                showError('signupEmailError', 'Email already in use');
+                hasError = true;
+            }
+
+            if (!hasError) {
+                // Create new user (in real app, this would be a server request)
+                const newUser = { name, email, password };
+                users.push(newUser);
+                
+                // Show success message
+                document.getElementById('signupSuccess').style.display = 'block';
+                console.log('New user created:', newUser);
+                console.log('All users:', users);
+                
+                // Clear form
+                document.getElementById('signupName').value = '';
+                document.getElementById('signupEmail').value = '';
+                document.getElementById('signupPassword').value = '';
+                document.getElementById('confirmPassword').value = '';
+                
+                // In a real app, you would redirect the user or update UI here
+                setTimeout(() => {
+                    alert(`Account created successfully! Welcome, ${name}!`);
+                    // Switch to login tab
+                    loginTab.click();
+                }, 1000);
+            }
+        }
+
+        // Helper functions
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+
+        function resetMessages() {
+            // Hide all error messages
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.style.display = 'none';
+            });
+            
+            // Hide success messages
+            document.getElementById('loginSuccess').style.display = 'none';
+            document.getElementById('signupSuccess').style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
