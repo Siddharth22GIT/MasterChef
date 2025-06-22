@@ -77,7 +77,20 @@ const recipes = {
     "thandai": "Ingredients: Milk, Nuts, Spices, Sugar. Instructions: Blend ingredients, chill, and serve cold.",
     "malpua": "Ingredients: Flour, Sugar, Coconut, Milk. Instructions: Make batter, fry pancakes, and soak in sugar syrup.",
     "puran poli": "Ingredients: Flour, Chana Dal, Jaggery, Cardamom. Instructions: Cook dal, mix with jaggery, stuff in flatbreads, and cook.",
-    "ladoo": "Ingredients: Various (e.g., coconut, besan, etc.). Instructions: Prepare base, mix with sugar, and form into balls."
+    "ladoo": "Ingredients: Various (e.g., coconut, besan, etc.). Instructions: Prepare base, mix with sugar, and form into balls.",
+    "vada pav": "Ingredients: Potato, Pav, Spices, Chutney. Instructions: Make spiced potato filling, fry in batter, serve in a bun.",
+    "dabeli": "Ingredients: Pav, spicy potato filling, peanuts, pomegranate, sev. Instructions: Fill pav with spicy potato mix, top with sev and pomegranate.",
+    "frankie": "Ingredients: Roti, spiced filling (potato/chicken/paneer), sauces. Instructions: Roll filling in roti, grill lightly, serve hot.",
+    "maggie": "Ingredients: Maggi noodles, water, tastemaker, vegetables (optional). Instructions: Boil noodles with tastemaker and veggies.",
+    "spring roll": "Ingredients: Spring roll wrappers, mixed vegetables, sauces. Instructions: Fill wrappers, roll, deep fry until golden.",
+    "manchurian": "Ingredients: Mixed vegetable balls, soy sauce, garlic, ginger. Instructions: Fry balls, toss in spicy sauce.",
+    "chaat": "Ingredients: Potatoes, chickpeas, chutneys, yogurt, sev. Instructions: Mix ingredients, top with chutneys and sev.",
+    "sev puri": "Ingredients: Puris, potatoes, onions, chutneys, sev. Instructions: Top puris with fillings, chutneys, and sev.",
+    "dahi puri": "Ingredients: Puris, potatoes, yogurt, chutneys. Instructions: Fill puris with potatoes, top with yogurt and chutneys.",
+    "pani puri": "Ingredients: Puris, spiced water, potatoes, chickpeas. Instructions: Fill puris with fillings, dip in spiced water, eat immediately.",
+    "bhel puri": "Ingredients: Puffed rice, vegetables, chutneys, sev. Instructions: Mix all ingredients, serve immediately.",
+    "pakora": "Ingredients: Gram flour, vegetables, spices. Instructions: Dip vegetables in batter, deep fry until golden.",
+    "bread pakora": "Ingredients: Bread, potato filling, gram flour. Instructions: Sandwich potato filling in bread, dip in batter, fry."
 };
 
 const input = document.getElementById('dishInput');
